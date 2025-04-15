@@ -1,0 +1,37 @@
+# Fuerza uso de LF para todos los archivos de texto
+* text eol=lf
+
+# Asegura UTF-8 como codificación por defecto
+* text=auto working-tree-encoding=UTF-8
+
+# Tratamiento especial para archivos por tipo (opcional pero recomendado)
+*.ts     text diff=ts
+*.tsx    text diff=ts
+*.js     text diff=javascript
+*.json   text
+*.md     text
+*.yml    text
+*.yaml   text
+*.sh     text eol=lf
+*.bat    text eol=crlf
+*.html   text
+*.css    text
+*.env    text
+
+# Evita que binarios se rompan por git al aplicar cambios de línea
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.webp   binary
+*.mp4    binary
+*.ttf    binary
+*.woff   binary
+*.woff2  binary
+
+# Evita cambios innecesarios en lock files
+deno.lock text
+
+# Opcional: si usás tests con coverage
+coverage/* linguist-vendored
+

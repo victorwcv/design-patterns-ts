@@ -1,0 +1,21 @@
+# Deno cache
+/deno.lock
+/deno.json
+/deno.jsonc
+/.deno/
+
+# Archivos generados (por si usas testing, logs, etc.)
+*.log
+*.tsbuildinfo
+
+# Config de entorno (por si en algún momento haces algo que lo requiera)
+.env
+.env.*
+
+# Editor
+.vscode/
+.idea/
+.DS_Store
+
+# Sistema
+Thumbs.db
