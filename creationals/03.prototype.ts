@@ -47,3 +47,46 @@ function main() {
 }
 
 main();
+
+
+class Pokemon {
+  name: string;
+  type: string;
+  level: number;
+  attacks: string[];
+
+  constructor(name: string, type: string, level: number, attacks: string[]) {
+    this.name = name;
+    this.type = type;
+    this.level = level;
+    this.attacks = attacks;
+  }
+
+  clone(): Pokemon {
+    return new Pokemon(this.name, this.type, this.level, this.attacks);
+  }
+
+  displayInfo(): void {
+    console.log(`
+      Nombre: ${this.name}
+      Tipo: ${this.type}
+      Nivel: ${this.level}
+      Ataques: ${this.attacks}
+    `);
+  }
+
+}
+
+
+function main2() {
+  const charmander = new Pokemon("Charmander", "Fuego", 1, ["Llamarada", "Arañazo"]);
+  charmander.displayInfo();
+
+  const charmeleon = charmander.clone();
+  charmeleon.name = "Charmeleon";
+  charmeleon.level = 16;
+  charmeleon.attacks.push("Lanzallamas");
+  charmeleon.displayInfo();
+}
+
+main2();
