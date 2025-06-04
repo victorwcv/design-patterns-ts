@@ -101,9 +101,9 @@ function main() {
   // Crear un menú principal que contiene todas las categorías
   const mainMenu = new MenuCategory('Menú Principal');
   mainMenu.add([appetizers, beverages, desserts, mainCourse]);
-  mainMenu.add(mainCourse);
-  mainMenu.add(beverages);
-  mainMenu.add(desserts);
+  // mainMenu.add(mainCourse);
+  // mainMenu.add(beverages);
+  // mainMenu.add(desserts);
 
   // Mostrar la estructura completa del menú
   console.log('Menú del Restaurante:');
